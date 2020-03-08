@@ -1,0 +1,56 @@
+@use "variables";
+@use "media";
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: variables.$shadow-blur;
+    &__row {
+        background: #ffffff;
+    }
+    &__row:last-child &__data {
+        border-bottom: 0;
+    }
+    &__head {
+        font-weight: 900;
+        color: #6b6b6b;
+        text-align: left;
+    }
+    &__head,
+    &__data {
+        padding: 1rem;
+        font-size: 0.8rem;
+        color: #6b6b6b;
+        border-bottom: 1px solid #e1e1e1;
+        max-width: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        a {
+            color: variables.$indigo;
+            text-decoration: none;
+        }
+    }
+    @include media.screen(med-small) {
+        border-spacing: 0 1rem;
+        &__head {
+            display: none;
+        }
+        &__data {
+            display: block;
+            &:before {
+                margin-bottom: 1rem;
+                content: attr(data-title);
+                min-width: 98px;
+                font-size: 10px;
+                line-height: 10px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #6b6b6b;
+                display: block;
+            }
+        }
+    }
+}

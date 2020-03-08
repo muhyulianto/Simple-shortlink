@@ -1,0 +1,86 @@
+@use "variables";
+@use "media";
+
+.login {
+    display: flex;
+    flex: 0 1 auto;
+    margin: 2rem 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.15);
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__body {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title {
+        margin-top: 0;
+    }
+    &__form {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &__name,
+    &__email,
+    &__password,
+    &__password_confirmation {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 0.15rem;
+        border: #cccccc 0.5px solid;
+        box-sizing: border-box;
+    }
+    &__forgot {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        a {
+            font-size: 0.75rem;
+            color: gray;
+        }
+    }
+    &__big-text,
+    &__small-text {
+        display: inline;
+        color: #fafafa;
+    }
+    &__big-text {
+        @extend .login__title;
+        font-size: 1.75rem;
+    }
+    &__small-text {
+        font-size: 0.75rem;
+    }
+    &__error {
+        color: variables.$red;
+        margin: 1rem 0 0 0;
+    }
+    &--blue {
+        background-color: variables.$indigo;
+    }
+}
+
+@include media.screen(med-small) {
+    .card {
+        width: 100%;
+    }
+    .login__right {
+        display: none;
+    }
+    .login__left {
+        width: 100% !important;
+    }
+}
+
+@include media.screen(small) {
+    .login {
+        margin: 0;
+    }
+}

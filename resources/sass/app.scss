@@ -1,0 +1,85 @@
+@use "variables";
+@use "media";
+@use "button";
+@use "login";
+@use "register";
+@use "navbar";
+@use "table";
+@use "form";
+@use "pagination";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+html,
+body {
+    margin: 0;
+    background-color: #f1f3f5;
+}
+
+html,
+body,
+button {
+    font-family: Nunito;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.py-10 {
+    padding: 10rem 0;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.self-start {
+    align-self: flex-start;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@include media.screen(med) {
+    .container {
+        width: 80%;
+    }
+}
+
+@include media.screen(med-small) {
+    .container {
+        width: 90%;
+    }
+}
+
+@include media.screen(small) {
+    .container {
+        width: 100%;
+    }
+}

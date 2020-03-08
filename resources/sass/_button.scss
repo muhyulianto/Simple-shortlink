@@ -1,0 +1,32 @@
+@use "variables";
+.button {
+    color: black;
+    border: 0;
+    padding: 10px 30px;
+    align-self: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    box-shadow: 0 1px 2px 0 #c7c7c7;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+        background-color: #f1f1f1;
+    }
+    &--green {
+        background-color: variables.$green;
+        color: white;
+        transition: 0.3s;
+        &:hover {
+            background-color: variables.$green-2;
+        }
+    }
+    &--teal {
+        background-color: variables.$teal;
+        color: white;
+        transition: 0.3s;
+        &:hover {
+            background-color: variables.$teal-2;
+        }
+    }
+}

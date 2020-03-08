@@ -1,0 +1,432 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);.button {
+  color: black;
+  border: 0;
+  padding: 10px 30px;
+  align-self: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  box-shadow: 0 1px 2px 0 #c7c7c7;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #f1f1f1;
+}
+
+.button--green {
+  background-color: #4caf50;
+  color: white;
+  transition: 0.3s;
+}
+
+.button--green:hover {
+  background-color: #388e3c;
+}
+
+.button--teal {
+  background-color: #009688;
+  color: white;
+  transition: 0.3s;
+}
+
+.button--teal:hover {
+  background-color: #00796b;
+}
+
+.login,
+.register {
+  display: flex;
+  flex: 0 1 auto;
+  margin: 2rem 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.login__left,
+.register__left,
+.register__right,
+.login__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__body,
+.register__body {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login__title,
+.register__title,
+.login__big-text {
+  margin-top: 0;
+}
+
+.login__form,
+.register__form {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.login__name,
+.register__name,
+.register__email,
+.register__password,
+.register__password_confirmation,
+.login__email,
+.login__password,
+.login__password_confirmation {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.15rem;
+  border: #cccccc 0.5px solid;
+  box-sizing: border-box;
+}
+
+.login__forgot,
+.register__login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.login__forgot a,
+.register__login a {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.login__big-text,
+.login__small-text {
+  display: inline;
+  color: #fafafa;
+}
+
+.login__big-text {
+  font-size: 1.75rem;
+}
+
+.login__small-text {
+  font-size: 0.75rem;
+}
+
+.login__error {
+  color: #e3342f;
+  margin: 1rem 0 0 0;
+}
+
+.login--blue,
+.register--blue {
+  background-color: #3f51b5;
+}
+
+@media screen and (max-width: 960px) {
+  .card {
+    width: 100%;
+  }
+
+  .login__right {
+    display: none;
+  }
+
+  .login__left,
+  .register__left,
+  .register__right {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login,
+  .register {
+    margin: 0;
+  }
+}
+
+.register__img {
+  align-self: center;
+}
+
+.register__text-right {
+  align-self: center;
+  color: #fff;
+}
+
+.register__login {
+  color: gray;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 960px) {
+  .register__left {
+    display: none;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+}
+
+.navbar__item {
+  display: flex;
+  margin: 2rem 2rem 2rem 0;
+}
+
+.navbar__item button {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navbar__item a,
+.navbar__item button {
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+  color: #6b6b6b;
+}
+
+.navbar__item a:after,
+.navbar__item button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #6b6b6b;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.navbar__item a:hover:after,
+.navbar__item button:hover:after {
+  width: 100%;
+}
+
+.navbar__logout {
+  display: inline-block;
+}
+
+.navbar--right {
+  margin: 2rem 0;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px -10px #c7c7c7;
+}
+
+.table__row {
+  background: #ffffff;
+}
+
+.table__row:last-child .table__data {
+  border-bottom: 0;
+}
+
+.table__head {
+  font-weight: 900;
+  color: #6b6b6b;
+  text-align: left;
+}
+
+.table__head,
+.table__data {
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #6b6b6b;
+  border-bottom: 1px solid #e1e1e1;
+  max-width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table__head a,
+.table__data a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+  .table {
+    border-spacing: 0 1rem;
+  }
+
+  .table__head {
+    display: none;
+  }
+
+  .table__data {
+    display: block;
+  }
+
+  .table__data:before {
+    margin-bottom: 1rem;
+    content: attr(data-title);
+    min-width: 98px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6b6b6b;
+    display: block;
+  }
+}
+
+.form-pemendek {
+  margin: 3rem 0;
+  display: flex;
+  position: relative;
+}
+
+.form-pemendek__input {
+  width: 100%;
+  border: 0;
+  color: #6b6b6b;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 1rem;
+  box-shadow: 0 5px 15px -10px #c7c7c7;
+}
+
+.form-pemendek__search-svg {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px -10px #c7c7c7;
+}
+
+.pagination .page-item {
+  display: inline-block;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+
+.pagination .page-item:hover {
+  background-color: #f4f5fc;
+}
+
+.pagination .page-item a {
+  text-decoration: none;
+}
+
+.pagination .page-item * {
+  padding: 1rem;
+  color: #3f51b5;
+}
+
+.pagination__outer {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.pagination .active * {
+  color: #6b6b6b;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: #f1f3f5;
+}
+
+html,
+body,
+button {
+  font-family: Nunito;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.py-10 {
+  padding: 10rem 0;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1175px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+

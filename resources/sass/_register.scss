@@ -1,0 +1,47 @@
+@use "variables";
+@use "media";
+@use "login";
+
+.register {
+    @extend .login;
+    &__left,
+    &__right {
+        @extend .login__left;
+    }
+    &__body {
+        @extend .login__body;
+    }
+    &__img {
+        align-self: center;
+    }
+    &__title {
+        @extend .login__title;
+    }
+    &__text-right {
+        align-self: center;
+        color: #fff;
+    }
+    &__form {
+        @extend .login__form;
+    }
+    &__name,
+    &__email,
+    &__password,
+    &__password_confirmation {
+        @extend .login__name;
+    }
+    &__login {
+        @extend .login__forgot;
+        color: gray;
+        font-size: 0.75rem;
+    }
+    &--blue {
+        @extend .login--blue;
+    }
+}
+
+@include media.screen(med-small) {
+    .register__left {
+        display: none;
+    }
+}
