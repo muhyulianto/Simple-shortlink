@@ -15,7 +15,7 @@ Install system requirement untuk laravel antara lain:
 9. Tokenizer PHP Extension
 10. XML PHP Extension
 
-Selengkapnya bisa anda baca di [sini](https://laravel.com/docs/6.x#server-requirements)
+Selengkapnya bisa anda baca di <a href="https://laravel.com/docs/6.x#server-requirements">sini</a>
 ```
 
 ```
@@ -25,6 +25,8 @@ Tahap penginstallan:
 3. Rename ".env.example" menjadi ".env"
 4. Setting nama databae, username, serta password di file .env
 ```
+
+## Screenshot tampilan program
 
 ![alt text](./gambar2.png "Simple shortlink example")
 ![alt text](./gambar1.png "Simple shortlink example")
